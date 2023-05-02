@@ -2,20 +2,22 @@
   <div>
     <Jumbotron />
     <v-container>
-      <v-row>
-        <v-col>
-          
-        </v-col>
-      </v-row>
+      <Searchbar />
     </v-container>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Jumbotron from '../components/Jumbotron.vue'
+import Searchbar from '../components/SearchPeople.vue'
+import Footer from '../components/Footer.vue'
+
   export default {
     components: {
-      Jumbotron
+      Jumbotron,
+      Searchbar,
+      Footer
     }
   }
 </script>

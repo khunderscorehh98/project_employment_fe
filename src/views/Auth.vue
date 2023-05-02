@@ -7,7 +7,9 @@
                     <h1>Login</h1>
                 </v-col>
             </v-row>
-
+            <inline-svg
+            src="../assets/svg/login.svg"
+            ></inline-svg>
             <form action="">
                 <v-text-field placeholder="Email Address" outlined />
                 <v-text-field placeholder="Password" outlined />
@@ -18,7 +20,6 @@
 </template>
 
 <script>
-
     export default {
         data() {
             return {

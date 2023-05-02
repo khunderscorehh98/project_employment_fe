@@ -11,3 +11,6 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
+
+import {InlineSvgPlugin} from 'vue-inline-svg';
+Vue.use(InlineSvgPlugin);
