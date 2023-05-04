@@ -85,6 +85,10 @@ export default {
         if (this.passwordR !== this.passwordRR) {
           alert("Check your registeration form please!");
         } else {
+          axios.post('http://localhost:5000/login', {
+            login: this.emailR,
+            password: this.passwordR
+          })
           await this.$router.push("/");
         }
       }
