@@ -105,6 +105,17 @@ export default {
             password: this.passwordL,
           });
 
+          // Auth0 Section
+          const auth0Client = new auth0.WebAuth({
+            domain: "dev-g8sqy0uu27b0traw.us.auth0.com",
+            clientID: "HnqJYjpAFpHaiA3PKU9LAtcLvrqtpRqE",
+            redirectUri: "http://localhost:8080/callback",
+            responseType: "token id_token",
+            scope: "openid profile email",
+          });
+
+          auth0Client.authorize();
+
           // Check if user is found
           if (response.data.exists) {
             // If login is successful, redirect to dashboard page
@@ -113,19 +124,10 @@ export default {
             // If user is not found, display an error message
             alert("User not found");
           }
+
         } catch (error) {
           // If login is unsuccessful, display a generic error message
           alert("Login failed");
-        } finally {
-          const auth0Client = new auth0.WebAuth({
-            domain: "YOUR_DOMAIN",
-            clientID: "YOUR_CLIENT_ID",
-            redirectUri: "http://localhost:8080/callback",
-            responseType: "token id_token",
-            scope: "openid profile email",
-          });
-
-          auth0Client.authorize();
         }
       }
     },
