@@ -75,6 +75,8 @@
 <script>
 // import Icon from '../components/LoginSVG.vue'
 import axios from "axios";
+import auth0 from 'auth0-js'
+
 export default {
   components: {},
   methods: {
@@ -85,10 +87,10 @@ export default {
         if (this.passwordR !== this.passwordRR) {
           alert("Check your registeration form please!");
         } else {
-          axios.post('http://localhost:5000/login', {
+          axios.post("http://localhost:5000/login", {
             login: this.emailR,
-            password: this.passwordR
-          })
+            password: this.passwordR,
+          });
           await this.$router.push("/");
         }
       }
@@ -114,6 +116,16 @@ export default {
         } catch (error) {
           // If login is unsuccessful, display a generic error message
           alert("Login failed");
+        } finally {
+          const auth0Client = new auth0.WebAuth({
+            domain: "YOUR_DOMAIN",
+            clientID: "YOUR_CLIENT_ID",
+            redirectUri: "http://localhost:8080/callback",
+            responseType: "token id_token",
+            scope: "openid profile email",
+          });
+
+          auth0Client.authorize();
         }
       }
     },
