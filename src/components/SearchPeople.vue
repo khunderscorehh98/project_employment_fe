@@ -4,6 +4,9 @@
         outlined
         label="Search Job..."
         append-inner-icon="mdi-magnify"
+        rounded
+        append-icon="mdi-magnify"
+        @click:append="searchBar"
       ></v-text-field>
     </div>
 </template>
@@ -15,7 +18,9 @@
     }),
 
     methods: {
-      
+      searchBar() {
+        console.log('Testing')
+      }
     },
   }
 </script>
