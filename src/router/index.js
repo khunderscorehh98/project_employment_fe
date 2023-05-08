@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Details from '../components/FreelancePage.vue'
+import Contact from '../views/Contact'
 
 import Auth from '../views/Auth'
 
@@ -32,6 +33,11 @@ const routes = [
     path: '/admin',
     name: "Admin",
     component: Admin
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
   },
   {
     path: '/detail/:id',
