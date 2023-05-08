@@ -13,7 +13,7 @@
         v-for="list in lists"
         :key="list.id"
         v-ripple
-        @click="showDetail(list.id)"
+        @click="showDetail(list.user_id)"
       >
         <v-row>
           <v-col>
