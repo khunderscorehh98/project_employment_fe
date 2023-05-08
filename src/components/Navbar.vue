@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="primary" dark>
+  <v-app-bar app color="transparent" dark elevation="0">
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -37,4 +37,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.bgNo{
+  background-color: rgba(0, 0, 0, 0.1);
+}
 </style>
