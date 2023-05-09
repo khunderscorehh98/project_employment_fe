@@ -13,10 +13,10 @@
             <v-btn text router-link to="/contact">Contact</v-btn>
           </v-col>
         </v-col>
-        <v-col>
+        <v-col cols="4">
           <v-col>
             <p class="text-uppercase font-weight-bold">
-                Created By: Haziq Halidi (Coding.Bn Cohort 2)
+                Created By: Haziq Halidi <br />(Coding.Bn Cohort 2)
             </p>
           </v-col>
           <v-col>
@@ -33,7 +33,7 @@
           </v-col>
         </v-col>
         <v-spacer></v-spacer>
-        <v-col>
+        <v-col cols="4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum totam aut
           fugit velit, deleniti praesentium repudiandae molestiae harum pariatur
           aliquid, qui dolor veritatis inventore. Earum totam ratione doloremque
