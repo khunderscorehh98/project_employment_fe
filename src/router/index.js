@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Details from '../components/FreelancePage.vue'
 import Contact from '../views/Contact'
+import createProfile from '../views/CreateProfile.vue'
 
 import Auth from '../views/Auth'
 
@@ -43,6 +44,12 @@ const routes = [
     path: '/detail/:id',
     name: "Detail",
     component: Details
+  },
+  //temporary for development
+  {
+    path: '/create-profile',
+    name: 'create-profile',
+    component: createProfile
   }
 ]
 
