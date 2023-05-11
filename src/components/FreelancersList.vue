@@ -18,7 +18,7 @@
         <v-row>
           <v-col>
             <h1>
-              {{ list.name }}
+              {{ list.first_name }}
             </h1>
             <hr />
             <br />
