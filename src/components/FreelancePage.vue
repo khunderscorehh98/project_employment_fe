@@ -6,7 +6,7 @@
                     <v-col>
                       <v-card class="cardPadStretchedVert">
                         <h1>
-                            {{ list.name }}
+                            {{ list.first_name + ' ' + list.last_name }}
                         </h1>
                         <h2>
                           Major in {{ list.major }}
@@ -28,7 +28,7 @@
                     </v-col>
                 </v-row>
                 <v-row>
-                  <v-card class="cardPadStretchedHori">
+                  <v-card class="cardPadStretchedHori outerMargin">
                     <h2>
                       Skills offered
                     </h2>
@@ -55,7 +55,17 @@ export default {
 
   },
   mounted() {
-    axios.get()
+    // TODO: API for skill
+    axios.get(['http://localhost:5000/people','http://localhost:5000/'])
+    .then(response => {
+        this.lists = response.data.data
+        console.log('Success')
+    })
+    .catch(error => {
+            console.error(error)
+            console.log('Here')
+        }
+    )
   },
   created() {
     const listId = this.$route.params.id;
@@ -76,5 +86,9 @@ export default {
 .cardPadStretchedHori{
   padding: 3%;
   min-width: 100%;
+}
+.outerMargin {
+  margin: 1%;
+  margin-bottom: 10%;
 }
 </style>
